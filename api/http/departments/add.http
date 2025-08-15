@@ -1,0 +1,17 @@
+# @import ../variables.http
+POST /department
+Authorization: Bearer {{adminAccessToken}}
+Content-Type: application/json
+{
+    "name": "FCAIT"
+}
+
+###
+
+# @import ../variables.http
+POST /department
+Authorization: Bearer {{adminAccessToken}}
+Content-Type: application/json
+{
+    "name": "FET"
+}

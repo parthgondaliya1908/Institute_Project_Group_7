@@ -1,0 +1,28 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/Properties": true,
+    "**/bin": true,
+    "**/obj": true
+  },
+  "[javascript]": {
+    "editor.tabSize": 2,
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative"
+}

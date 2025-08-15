@@ -1,0 +1,3 @@
+# @import ../variables.http
+GET /departments
+Authorization: Bearer {{adminAccessToken}}

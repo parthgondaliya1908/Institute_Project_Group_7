@@ -1,0 +1,3 @@
+# @import ../variables.http
+DELETE /department/1
+Authorization: Bearer {{adminAccessToken}}

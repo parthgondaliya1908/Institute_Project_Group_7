@@ -1,0 +1,7 @@
+# @import ../variables.http
+POST /course
+Content-Type: application/json
+{
+    "name": "MCA",
+    "departmentId": 1
+}

@@ -1,0 +1,57 @@
+@page "/login/web"
+@namespace Api.Pages
+@using Api.Features.Auth
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sign in with Google</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+
+<body>
+  <div id="g_id_onload" data-client_id="740265618267-8oami3vtamp90ga0bj1hb8kes2jo00sl.apps.googleusercontent.com"
+    data-callback="handleCredentialResponse" data-auto_prompt="false">
+  </div>
+
+  <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with"
+    data-shape="rectangular" data-logo_alignment="left">
+  </div>
+
+  <br><br>
+  <button type="button" onclick="refreshTokens()">Refresh</button>
+
+  <script>
+    let accessToken = "";
+
+    async function handleCredentialResponse(googleResponse) {
+      const googleToken = googleResponse.credential;
+
+      let response = await fetch('@Api.GoogleWeb.Url', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ googleToken })
+      });
+      
+      let json = await response.json();
+      accessToken = json.accessToken;
+    }
+
+    async function refreshTokens() {
+      let response = await fetch('@Api.RefreshTokensWeb.Url', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`
+        }
+      });
+
+      let json = await response.json();
+      console.log(json);
+    }
+  </script>
+</body>
+
+</html>

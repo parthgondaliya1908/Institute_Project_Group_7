@@ -1,0 +1,7 @@
+# @import ../variables.http
+PUT /department/3
+Authorization: Bearer {{adminAccessToken}}
+Content-Type: application/json
+{
+    "name": "FCAIT 1"
+}

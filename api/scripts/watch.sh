@@ -1,0 +1,1 @@
+dotnet watch --project api/src --launch-profile https

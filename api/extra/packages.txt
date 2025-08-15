@@ -1,0 +1,20 @@
+dotnet add src package Microsoft.AspNetCore.Authentication.JwtBearer --version 8.0.11
+dotnet add src package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version 8.0.11
+dotnet add src package Microsoft.EntityFrameworkCore --version 8.0.11
+dotnet add src package Microsoft.EntityFrameworkCore.Abstractions --version 8.0.11
+dotnet add src package Microsoft.EntityFrameworkCore.Relational --version 8.0.11
+dotnet add src package Microsoft.EntityFrameworkCore.Tools --version 8.0.11
+dotnet add src package Npgsql.EntityFrameworkCore.PostgreSQL --version 8.0.11
+dotnet add src package Microsoft.Extensions.DependencyInjection --version 8.0.1
+dotnet add src package FluentValidation --version 8.0.3
+dotnet add src package Serilog
+dotnet add src package Serilog.AspNetCore 
+dotnet add src package Serilog.Sinks.Async
+dotnet add src package Serilog.Sinks.Console
+dotnet add src package Serilog.Sinks.File
+dotnet add src package Swashbuckle.AspNetCore
+
+dotnet add tests package coverlet.collector
+dotnet add tests package Microsoft.NET.Test.Sdk
+dotnet add tests package xunit
+dotnet add tests package xunit.runner.visualstudio
